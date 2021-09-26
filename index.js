@@ -5,6 +5,9 @@ import mongoose from "mongoose";
 // const Note = requiodels/note");
 // const Note = require("./models/note");
 import Note from "./models/note.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -75,7 +78,7 @@ app.post("/api/notes", (request, response) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Ebrima, the server is listening on port ${PORT}`);
 });
